@@ -2,8 +2,8 @@ $(document).ready(function(){
     
       $('form').on('submit', function(){
     
-          var item = $('form input');
-          var todo = {item: item.val()};
+          const item = $('form input');
+          const todo = {item: item.val()};
     
           $.ajax({
             type: 'POST',
@@ -20,7 +20,7 @@ $(document).ready(function(){
       });
     
       $('li').on('click', function(){
-          var item = $(this).text().replace(/ /g, "-");
+          const item = $(this).text().replace(/ /g, "-");
           $.ajax({
             type: 'DELETE',
             url: '/todo/' + item,
